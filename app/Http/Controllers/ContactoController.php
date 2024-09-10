@@ -15,8 +15,9 @@ class ContactoController extends Controller
         //return view ('listado-contactos', ['mensajes'=> $mensajes]);
         //return view ('listado-contactos', ['mensajes'=> Contacto::all()]);
     }
-    public function formContacto(){
-        return view('contacto');
+    public function formContacto($tipo_usuario = null){
+
+        return view('contacto', compact('tipo_usuario'));
     }
     public function guardarFormulario(Request $request){
             //Recibir datos: mediante request
